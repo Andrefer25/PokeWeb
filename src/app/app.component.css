@@ -1,0 +1,19 @@
+.menubox {
+    /*background-color:rgba(0, 0, 0, 0.4);*/
+    background-color: whitesmoke;
+    padding: 0;
+}
+
+.carousel-item img {
+    filter: brightness(0.7);
+    transition: all 1.3s;
+}
+
+.carousel-item {
+    overflow: hidden;
+}
+
+.carousel-item:hover img{
+    transform: scale(1.05);
+    cursor: pointer;
+}
