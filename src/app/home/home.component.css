@@ -1,0 +1,71 @@
+.carousel-item img {
+    filter: brightness(0.6);
+    transition: all 1.3s;
+}
+
+.carousel-item {
+    overflow: hidden;
+}
+
+.carousel-item:hover img{
+    transform: scale(1.05);
+    cursor: pointer;
+}
+
+h2 {
+    font-size: 1.5em;
+    border-bottom: 0.2px solid black;
+}
+
+.inicio {
+    margin-top: 0.7em;
+    padding: 0.3em;
+}
+
+.titprin {
+    display: inline-flex;
+}
+
+.titprin h2, .titprin img {
+    margin-left: 0.5em;
+}
+
+.Dex {
+    border-radius: 6px;
+    margin: 1em auto;
+    padding: 0.5em;
+    background-color: rgb(170, 6, 6);
+}
+
+.poke {
+    background-color: black;
+    border-radius: 8px;
+}
+
+.datpoke, .infpoke, .nompoke {
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    border-radius: 6px;
+    background-color: black;
+    padding: 0.5em;
+    color: whitesmoke;
+}
+
+.infpoke, .nompoke {
+    margin: 0;
+    padding: 0;
+}
+
+.nompoke {
+    margin-bottom: 0.4em;
+}
+
+.carousel-caption h5 {
+    font-size: 3em;
+}
+
+.carousel-caption p {
+    font-size: 1.2em;
+    font-weight: bold;
+}
+

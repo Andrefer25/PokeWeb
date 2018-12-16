@@ -3,5 +3,4 @@ body{
     background: url(/assets/img/fondo3.jpg);
     background-size: cover;
     background-attachment: fixed;
-    overflow: scroll;
 }
