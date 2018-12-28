@@ -1,15 +1,31 @@
-<h2 class="text-center">Pokedex</h2>
-<div class="pokedex">
-    <div class="dexbox">
-        <div class="row">
-            <div class="col-4 text-center">
-                <a href="">Kanto</a>
+<div class="menubox container">
+    <h2 class="text-center">Pokedex</h2>
+    <div id="accordion">
+        <div class="card" *ngFor="let pokemon of pokemons | orderBy: 'dexnumber'">
+            <div class="card-header" [attr.id]="'heading' + pokemon.id">
+                <h5 class="mb-0">
+                    <button class="btn btn-link collapsed" data-toggle="collapse" [attr.data-target]="'#collapse' + pokemon.dexnumber"
+                        aria-expanded="false" [attr.aria-controls]="'collapse'+pokemon.dexnumber">
+                        <div class="row">
+                            <div class="col-4 text-center">
+                                <img [src]="pokemon.pokemini" [alt]="pokemon.name">
+                            </div>
+                            <div class="col-4 text-center">
+                                {{ pokemon.dexnumber }}
+                            </div>
+                            <div class="col-4 text-center">
+                                {{ pokemon.name }}
+                            </div>
+                        </div>
+                    </button>
+                </h5>
             </div>
-            <div class="col-4 text-center">
-                <p>Johto</p>
-            </div>
-            <div class="col-4 text-center">
-                <p>Hoenn</p>
+    
+            <div [attr.id]="'collapse'+pokemon.dexnumber" class="collapse" [attr.aria-labelledby]="'heading'+pokemon.dexnumber"
+                data-parent="#accordion">
+                <div class="card-body">
+                    {{ pokemon.dexinfo }}
+                </div>
             </div>
         </div>
     </div>

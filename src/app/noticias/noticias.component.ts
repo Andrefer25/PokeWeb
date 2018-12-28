@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { NotiDBService } from '../services/notidb.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-noticias',
@@ -7,9 +9,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NoticiasComponent implements OnInit {
 
-  constructor() { }
+  noticias: any[] = [];
+
+  constructor(private router: Router, public _NotiService: NotiDBService) { }
 
   ngOnInit() {
+    this._NotiService.getNoticias().subscribe(info => {
+      console.log(info);
+      this.noticias = info;
+    });
   }
 
 }

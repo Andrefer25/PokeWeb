@@ -1,0 +1,54 @@
+<div class="loginadm">
+  <div class="container newnoti">
+    <form method="post" (ngSubmit)="alta()" [formGroup]="forma">
+      <div class="form-group">
+        <label for="title">Titulo</label>
+        <input type="text" formControlName="title" class="form-control" id="title" placeholder="Ingrese el titulo de la noticia" name="title"
+          [(ngModel)]="noticia.title">
+        <div *ngIf="forma.controls['title'].errors?.required" class="form-control-feedback">
+          El titulo es obligatorio.
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="subtitle">Subtitulo</label>
+        <input type="text" formControlName="subtitle" class="form-control" id="subtitle" placeholder="Ingrese el subtitulo de la noticia" name="subtitle"
+          [(ngModel)]="noticia.subtitle">
+        <div *ngIf="forma.controls['subtitle'].errors?.required" class="form-control-feedback">
+          El subtitulo es obligatorio.
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="notimg">Link Imagen</label>
+        <input type="text" formControlName="notimg" class="form-control" id="notimg" placeholder="Ingrese el link de la imagen" name="notimg"
+          [(ngModel)]="noticia.notimg">
+        <div *ngIf="forma.controls['notimg'].errors?.required" class="form-control-feedback">
+          El url es obligatorio.
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="autor">Autor</label>
+        <input type="text" class="form-control" formControlName="autor" id="autor" placeholder="Ingrese el autor" name="autor" [(ngModel)]="noticia.autor">
+        <div *ngIf="forma.controls['autor'].errors?.required" class="form-control-feedback">
+          El autor es obligatorio.
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="fecha">Fecha</label>
+        <input type="text" class="form-control" formControlName="fecha" id="fecha" placeholder="Ingrese la fecha (dd/mm/aaaa)" name="fecha"
+          [(ngModel)]="noticia.fecha">
+        <div *ngIf="forma.controls['fecha'].errors?.required" class="form-control-feedback">
+          La fecha es obligatoria.
+        </div>
+      </div>
+      <div class="form-group">
+        <textarea style="width:100%;" formControlName="nottext" [(ngModel)]="noticia.nottext" name="nottext" id="nottext"></textarea>
+      </div>
+      <div class="form-group row">
+        <div class="input-group col-md-8">
+          <button type="submit" class="btn btn-primary" *ngIf="forma.valid">Guardar</button>
+          <button type="button" (click)="cancelar()" class="btn btn-danger">Cancelar</button>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>  

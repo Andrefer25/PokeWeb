@@ -1,3 +1,16 @@
-<p>
-  noticias works!
-</p>
+<div class="menubox container">
+  <div class="titprin">
+    <img src="assets/img/arcanine.png" width="30" height="30" alt="">
+    <h2>Noticias</h2>
+  </div>
+  <div class="row" *ngFor="let noticia of noticias | orderBy: 'fecha'">
+    <div class="col-3">
+      <img class="img-responsive" style="width:100%; margin-left: 1em;" [src]="noticia.notimg" [alt]="noticia.title">
+    </div>
+    <div class="col-9">
+      <h3 style="font-weight:bolder">{{noticia.title}}</h3>
+      <h5>{{noticia.subtitle}}</h5>
+    </div>
+  </div>
+</div>
+

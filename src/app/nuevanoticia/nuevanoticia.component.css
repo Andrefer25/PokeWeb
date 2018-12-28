@@ -1,0 +1,13 @@
+.loginadm {
+    background: url(/assets/img/adminwall.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    margin-bottom: 1em;
+    height: 100%;
+    padding: 1em;
+}
+
+.newnoti{
+    background-color: whitesmoke;
+    padding: 1em; 
+}

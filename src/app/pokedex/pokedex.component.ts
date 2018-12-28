@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { PokeapiService } from '../services/pokeapi.service';
+import { Router } from '@angular/router';
+import { HttpClientModule } from '@angular/common/http'; import { HttpModule } from '@angular/http';
 
 @Component({
   selector: 'app-pokedex',
@@ -7,10 +10,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PokedexComponent implements OnInit {
 
-  constructor() { }
+  pokemons: any[] = [];
 
+  constructor(public _pokedex: PokeapiService, private router: Router) { }
 
   ngOnInit() {
+    this._pokedex.getPokemons().subscribe(data => {
+      console.log(data);
+      this.pokemons = data;
+    });
   }
 
 }
