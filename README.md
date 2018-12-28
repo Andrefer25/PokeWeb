@@ -1,5 +1,13 @@
 # PokeWeb
 
+1. mongoimport --db pokemons --collection pokemons --file pokemons.json
+   mongoimport --db pokemons --collection noticias --file noticias.json
+2. npm install en pokeweb y en backend
+3. mongod
+4. node app.js en backend
+5. ng serve en pokeweb
+6. EL PANEL DE ADMINISTRACION SE ACCEDE A TRAVES DEL FOOTER CLICKEANDO EN "Andre Malpica"
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.0.6.
 
 ## Development server
